@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnretirar = new System.Windows.Forms.Button();
             this.lblcantidad = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtcantidad = new System.Windows.Forms.TextBox();
             this.lblrespuesta = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnretirar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(151, 122);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "RETIRAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnretirar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnretirar.Location = new System.Drawing.Point(151, 122);
+            this.btnretirar.Name = "btnretirar";
+            this.btnretirar.Size = new System.Drawing.Size(113, 23);
+            this.btnretirar.TabIndex = 0;
+            this.btnretirar.Text = "RETIRAR";
+            this.btnretirar.UseVisualStyleBackColor = true;
+            this.btnretirar.Click += new System.EventHandler(this.btnretirar_Click);
             // 
             // lblcantidad
             // 
@@ -53,12 +54,12 @@
             this.lblcantidad.TabIndex = 1;
             this.lblcantidad.Text = "CANTIDAD:";
             // 
-            // textBox1
+            // txtcantidad
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtcantidad.Location = new System.Drawing.Point(151, 51);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtcantidad.TabIndex = 2;
             // 
             // lblrespuesta
             // 
@@ -76,9 +77,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(381, 207);
             this.Controls.Add(this.lblrespuesta);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtcantidad);
             this.Controls.Add(this.lblcantidad);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnretirar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -91,9 +92,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnretirar;
         private System.Windows.Forms.Label lblcantidad;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Label lblrespuesta;
     }
 }
