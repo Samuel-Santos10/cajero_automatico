@@ -26,6 +26,8 @@ namespace cajero_automatico
 
             /* Recorrer todos los valores en las dominaciones */
 
+            lblrespuesta.Visible = true;
+
             foreach (double denominacion in denominaciones)
             {
 
@@ -47,5 +49,64 @@ namespace cajero_automatico
             lblrespuesta.Text = respuesta;
 
         }
+
+        private void btnpagar_Click_1(object sender, EventArgs e)
+        {
+
+            double[] denominaciones = { 100, 50, 20, 10, 5, 1, 0.50, 0.10, 0.05, 0.01 };
+
+            //Convertimos los texbox de tipo texto a numerico
+
+            double cantidad = double.Parse(txtpagar.Text);
+            double pago = double.Parse(txtpago.Text);
+
+            sbyte n = 0;
+
+            double vuelto = pago - cantidad;
+
+            string resp = "Vuelto: \n" ; // \n es un separador de espacio
+
+            foreach (double denominacion in denominaciones)
+
+            {
+
+                while (denominacion <= Math.Round(vuelto, 2)) {
+                n++;
+                   
+
+                vuelto -= denominacion;
+                    
+                }
+
+
+                if (n > 0) 
+
+               
+                {
+
+                    resp += n + (denominacion > 1 ? "Billete" : "Monedas") + denominacion + "\n";
+
+                }
+
+
+                if (pago < cantidad)
+
+                {
+
+                    resp = "Cancele completamente";
+
+                }
+   
+
+            n = 0;
+
+            }
+
+
+            lblresp.Text = resp;
+
+        }
+
+       
     }
 }
