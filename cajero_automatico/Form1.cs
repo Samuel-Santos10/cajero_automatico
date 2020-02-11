@@ -62,8 +62,11 @@ namespace cajero_automatico
             double pago = double.Parse(txtpago.Text);
 
             sbyte n = 0;
-             
+              
+
             double vuelto = pago - cantidad;
+
+            double exacto = vuelto;
 
             string resp = "Vuelto: \n"; // \n es un separador de espacio
 
@@ -85,7 +88,7 @@ namespace cajero_automatico
                
                 {
 
-                    resp += n + (denominacion > 1 ? "Billete" : "Monedas") + denominacion + "\n";
+                    resp += "Vuelto total: " + exacto + "\n" + n + (denominacion > 1 ? "Billete" : "Monedas") + denominacion + "\n";
 
                 }
 
