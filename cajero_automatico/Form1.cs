@@ -15,6 +15,7 @@ namespace cajero_automatico
         public Form1()
         {
             InitializeComponent();
+            fibonacci();
         }
 
         private void btnretirar_Click(object sender, EventArgs e)
@@ -61,10 +62,10 @@ namespace cajero_automatico
             double pago = double.Parse(txtpago.Text);
 
             sbyte n = 0;
-
+             
             double vuelto = pago - cantidad;
 
-            string resp = "Vuelto: \n" ; // \n es un separador de espacio
+            string resp = "Vuelto: \n"; // \n es un separador de espacio
 
             foreach (double denominacion in denominaciones)
 
@@ -107,6 +108,97 @@ namespace cajero_automatico
 
         }
 
-       
+        private void btncalcular_Click(object sender, EventArgs e)
+        {
+
+            int numero = byte.Parse(txtnum.Text);
+
+            int cont = 0;
+
+            for (int i = 1; i <= numero; i++)
+
+            {
+
+                if (numero % i == 0)
+
+                {
+                    cont++;
+                }
+            }
+
+            if (cont == 2)
+            {
+                lblrespuesta.Text = numero + (" Es PRIMO");
+
+            }
+
+            else
+
+            {
+                lblrespuesta.Text = numero + (" NO es primo");
+            }
+
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            lblresul.Text = "";
+            txtnum.Text = "";
+        }
+
+        private void fibonacci()
+
+        {
+
+            int pnumero = 0;
+            int snumero = 1;
+            int x;
+            int nlimite = 1000;
+
+            lstnumeros.Items.Add(pnumero);
+            lstnumeros.Items.Add(snumero);
+
+            while (snumero + pnumero <= nlimite)
+            {
+                x = pnumero;
+                pnumero = snumero;
+                snumero = x + pnumero;
+
+                lstnumeros.Items.Add(snumero);
+            }
+
+        }
+
+        private void btncalcular_Click_1(object sender, EventArgs e)
+        {
+
+            int numero = byte.Parse(txtnum.Text);
+
+            int cont = 0;
+
+            for (int i = 1; i <= numero; i++)
+
+            {
+
+                if (numero % i == 0)
+
+                {
+                    cont++;
+                }
+            }
+
+            if (cont == 2)
+            {
+                lblresul.Text = numero + (" Es PRIMO");
+
+            }
+
+            else
+
+            {
+                lblresul.Text = numero + (" NO es primo");
+            }
+
+        }
     }
 }

@@ -40,8 +40,19 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnpagar = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lstnumeros = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnnuevo = new System.Windows.Forms.Button();
+            this.lblresul = new System.Windows.Forms.Label();
+            this.txtnum = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btncalcular = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnretirar
@@ -177,13 +188,109 @@
             this.btnpagar.UseVisualStyleBackColor = false;
             this.btnpagar.Click += new System.EventHandler(this.btnpagar_Click_1);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Pink;
+            this.groupBox3.Controls.Add(this.lstnumeros);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(379, 360);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(298, 415);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "FIBONACCI";
+            // 
+            // lstnumeros
+            // 
+            this.lstnumeros.FormattingEnabled = true;
+            this.lstnumeros.ItemHeight = 17;
+            this.lstnumeros.Location = new System.Drawing.Point(36, 62);
+            this.lstnumeros.Name = "lstnumeros";
+            this.lstnumeros.Size = new System.Drawing.Size(230, 344);
+            this.lstnumeros.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(82, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Numeros Fibonacci";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox4.Controls.Add(this.btncalcular);
+            this.groupBox4.Controls.Add(this.btnnuevo);
+            this.groupBox4.Controls.Add(this.lblresul);
+            this.groupBox4.Controls.Add(this.txtnum);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(15, 360);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(298, 130);
+            this.groupBox4.TabIndex = 13;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Numeros Primos o NO Primos";
+            // 
+            // btnnuevo
+            // 
+            this.btnnuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnnuevo.Location = new System.Drawing.Point(187, 101);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(87, 23);
+            this.btnnuevo.TabIndex = 6;
+            this.btnnuevo.Text = "Reintentar";
+            this.btnnuevo.UseVisualStyleBackColor = false;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
+            // 
+            // lblresul
+            // 
+            this.lblresul.AutoSize = true;
+            this.lblresul.Location = new System.Drawing.Point(42, 80);
+            this.lblresul.Name = "lblresul";
+            this.lblresul.Size = new System.Drawing.Size(14, 17);
+            this.lblresul.TabIndex = 4;
+            this.lblresul.Text = "?";
+            // 
+            // txtnum
+            // 
+            this.txtnum.Location = new System.Drawing.Point(164, 36);
+            this.txtnum.Name = "txtnum";
+            this.txtnum.Size = new System.Drawing.Size(81, 29);
+            this.txtnum.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 17);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Ingrese un numero:";
+            // 
+            // btncalcular
+            // 
+            this.btncalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btncalcular.Location = new System.Drawing.Point(187, 77);
+            this.btncalcular.Name = "btncalcular";
+            this.btncalcular.Size = new System.Drawing.Size(87, 23);
+            this.btncalcular.TabIndex = 7;
+            this.btncalcular.Text = "Calcular";
+            this.btncalcular.UseVisualStyleBackColor = false;
+            this.btncalcular.Click += new System.EventHandler(this.btncalcular_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(719, 353);
+            this.ClientSize = new System.Drawing.Size(719, 790);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -195,6 +302,10 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -213,6 +324,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnpagar;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ListBox lstnumeros;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnnuevo;
+        private System.Windows.Forms.Label lblresul;
+        private System.Windows.Forms.TextBox txtnum;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btncalcular;
     }
 }
 
